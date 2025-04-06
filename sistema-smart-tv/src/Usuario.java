@@ -25,5 +25,10 @@ public class Usuario {
         System.out.println("Status5 -> TV ligada? " + smartTv.ligada);
         System.out.println("Volume atual: " + smartTv.volume);
         System.out.println("Canal atual: " + smartTv.canal);
+
+        smartTv.mudarCanal(7);;
+        System.out.println("Status6 -> TV ligada? " + smartTv.ligada);
+        System.out.println("Volume atual: " + smartTv.volume);
+        System.out.println("Canal atual: " + smartTv.canal);
     }
 }
