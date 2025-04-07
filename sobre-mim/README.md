@@ -6,9 +6,7 @@
 
     Ex.: cd D:\Dio Java\dio-java-basico\sobre-mim\bin
 
-    #### java SobreMim "digite-primeiro-nome" "segundo-nome" "idade" "altura"
-
-    Ex.: java SobreMim Luã Gabriel 26 1.75
+    #### java SobreMim
 
 ---------------------------------------------------------------------
 

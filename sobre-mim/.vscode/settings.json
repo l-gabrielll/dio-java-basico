@@ -1,6 +1,7 @@
 {
     "java.project.sourcePaths": ["src"],
     "java.project.outputPath": "bin",
+    "terminal.integrated.defaultEncoding": "utf-8",
     "java.project.referencedLibraries": [
         "lib/**/*.jar"
     ]
