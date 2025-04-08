@@ -1,10 +1,11 @@
 public class ExemploBreakContinue {
     public static void main(String[] args) {
-        for(int numero = 1; numero <= 10; numero ++){
-            if(numero%2==0)
-            continue;
+        int numeros[] = {1,3,5,7,8,9};
+        for(int x = 0; x < numeros.length; x ++){
+            if(numeros[x]%2==0)
+            break;
 
-            System.out.println(numero);
+            System.out.println(numeros[x]);
         }
     }
 }
