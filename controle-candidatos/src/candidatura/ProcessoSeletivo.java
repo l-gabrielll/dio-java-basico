@@ -1,26 +1,41 @@
 package candidatura;
 
 import java.util.Locale;
+import java.util.Random;
 import java.util.Scanner;
 
 public class ProcessoSeletivo {
     public static void main(String[] args) throws Exception {
-        imprimirSelecionados();
-        /*selecaoCandidatos();
-        Scanner scanner = new Scanner(System.in).useLocale(Locale.US);
-
-        System.out.println("informe a quantidade de candidatos: ");
-        int quantidadeCandidatos = scanner.nextInt();
-
-        for (int x = 0; x < quantidadeCandidatos; x++) {
-        System.out.println("Digite o valor do salário pretendido: ");
-        double salarioPretendido = scanner.nextDouble();
-
-        String retorno = analisarCandidato(salarioPretendido);
-        System.out.println(retorno);
+        String candidatos[] = {"FELIPE", "MARCIA", "JULIA", "PAULO", "AUGUSTO"};
+        for(String candidato : candidatos){
+            entrandoEmContato(candidato);
         }
+    }
 
-        scanner.close();*/
+    public static void entrandoEmContato(String candidato){
+        int tentativasRealizadas = 1;
+        boolean continuartentando = true;
+        boolean atendeu = false;
+        do {
+            atendeu = atender();
+            continuartentando = !atendeu;
+            if (continuartentando) {
+                tentativasRealizadas++;
+            } else {
+                System.out.println("Contato realizado com sucesso.");
+            }
+
+        } while(continuartentando && tentativasRealizadas<3);
+
+        if (atendeu) {
+            System.out.println("Conseguimos contato com " + candidato + " na " + tentativasRealizadas + "ª tentativa");
+        } else {
+            System.out.println("Não conseguimos contato com " + candidato + ". Número  de tentativas realizadas: " + tentativasRealizadas);
+        }
+    }
+
+    public static boolean atender() {
+        return new Random().nextInt(3) == 1;
     }
 
     public static void imprimirSelecionados() {
