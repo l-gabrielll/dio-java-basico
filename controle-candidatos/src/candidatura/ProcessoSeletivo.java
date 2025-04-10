@@ -5,8 +5,9 @@ import java.util.Scanner;
 
 public class ProcessoSeletivo {
     public static void main(String[] args) throws Exception {
-        selecaoCandidatos();
-        /*Scanner scanner = new Scanner(System.in).useLocale(Locale.US);
+        imprimirSelecionados();
+        /*selecaoCandidatos();
+        Scanner scanner = new Scanner(System.in).useLocale(Locale.US);
 
         System.out.println("informe a quantidade de candidatos: ");
         int quantidadeCandidatos = scanner.nextInt();
@@ -20,6 +21,16 @@ public class ProcessoSeletivo {
         }
 
         scanner.close();*/
+    }
+
+    public static void imprimirSelecionados() {
+         String candidatos[] = {"FELIPE", "MARCIA", "JULIA", "PAULO", "AUGUSTO"};
+
+         System.out.println("Imprimindo a lista de candidatos informando o indice do elemento");
+
+         for (String candidato : candidatos){
+            System.out.println("A candidatura de " + candidato + " foi aprovada para a vaga.");
+         }
     }
 
     public static void selecaoCandidatos(){
